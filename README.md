@@ -10,7 +10,7 @@ Técnologias Utilizadas:
 Itens deselvolvidos: 
 	
 	-Login(validação do usuário em banco de dados);
-	-CRUD(alterar,editar e excluir um usuário);
+	-CRUD(inserir,alterar,editar e excluir um usuário);
 	-Upload de Foto de perfil;
 		
 	
