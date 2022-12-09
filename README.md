@@ -1,5 +1,5 @@
 # Notario
-Itens Utilizados:
+Técnologias Utilizadas:
 
 	-JavaServer Pages(JSP);
 	-MYSql;
@@ -7,11 +7,10 @@ Itens Utilizados:
 	-Bootstrap;
 	-Apache;
 	
+Itens deselvolvidos: 
 	
-	Itens deselvolvidos: 
-	
-		-Login(validação do usuário em banco de dados);
-		-CRUD(alterar,editar e excluir um usuário);
-		-Upload de Foto de perfil;
+	-Login(validação do usuário em banco de dados);
+	-CRUD(alterar,editar e excluir um usuário);
+	-Upload de Foto de perfil;
 		
 	
