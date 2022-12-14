@@ -33,6 +33,7 @@
 		{
 			 rssenha = request.getParameter("senha");
 			 rsnome = request.getParameter("nome");
+			 out.print("dados atualizados");
 
 		}
 		if (senha.equals(rssenha) && nome.equals(rsnome))
@@ -41,7 +42,8 @@
 		}
 		else 
 		{
-			out.print("dados diferentes");
+			out.print("false");
+			out.print("senha/usuário cadastrado não existe");
 		}	
 	}
 	catch(Exception e)

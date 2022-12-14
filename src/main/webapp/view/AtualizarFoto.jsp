@@ -11,38 +11,42 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript">
-	
 	$(document).ready(function(){
+						  
+						    $(document).ready(function() {
+							            $('input[type="file"]').change(function(e) {
+								                var geekss = e.target.files[0].name;
+								                $("h4").text(geekss);
+								 
+								            });
+								        });
+							
+					
 		$("#btnEnviar").click(function(){
 			var frmData = $("#frmLogin").serialize();
 			$("clear").empty();
 			$.ajax({
-				url : "http://localhost:8080/Notar/controller/EditarPerfil.jsp",
+				url : "http://localhost:8080/Notar/controller/AtualizarFoto.jsp",
 				data : frmData,
 				type : "post",
 				success : function(data){
-					if (data.trim() == "false")
+					if (data.trim() == "true")
 					{
-						
-						alert("Senha/Usuário cadastrado não existe");
-	      				//var url = "http://localhost:8080/Notar/view/login.jsp";
- 						//window.location = url;
-												
-					}else{
-						
-						alert("Dados Atualizados");
+							       
+						alert("Foto Atualizada!");
+
+					
+					}else{	
+						$("#getMsg").html("Usuário ou senha Inválido!");
+						return;
 					}			 
 				}
 			});
 		});		
 	 });
-	
-	
-	
-	
 	</script>
-
-  <title>Web Lojinha</title>
+	
+<title>Web Lojinha</title>
 </head>
 <body class="gradient-custom" >
   <style>   
@@ -69,28 +73,31 @@
 
       /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       background: linear-gradient(to right, rgba(16, 45, 74, 0.975), rgb(1, 1, 1));
-set. 21, 2022 8:57:48 PM org.apache.catalina.core.StandardWrapperValve invoke
+	  /* set. 21, 2022 8:57:48 PM org.apache.catalina.core.StandardWrapperValve invoke */
 
   }
-	.bordas{
-    border-radius: 3rem;
-    
- }
- .imgField{
- 	padding-bottom:15px;
- 	padding-top: 15px;
- 	padding-left: 15px;
- 	padding-right: 15px;
-    background: #181b1e;
-    border-radius: 15px;
- }
- .voltar{
- 	margin-bottom: -5rem;
- }
- #botao{
- 	margin-left: 5rem;
- }
+	  .bordas{
+	    border-radius: 3rem;
+	    
+	   }
+	 .imgField{
+	 	padding-bottom:15px;
+	 	padding-top: 15px;
+	 	padding-left: 15px;
+	 	padding-right: 15px;
+	    border-radius: 15px;
+	 }
+	 .voltar{
+	 	margin-bottom: -5rem;
+	 }
+	 #botao{
+	 	margin-left: 5rem;
+	 }
+	 .form-outline{
+	 	padding-top: 1rem;
+	 }
   </style>  
+  
     <section>
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100" style="padding-bottom: 100%">
@@ -98,38 +105,27 @@ set. 21, 2022 8:57:48 PM org.apache.catalina.core.StandardWrapperValve invoke
           <div class="card bg-dark text-light" style="border-radius: 2rem; ;">
             <div class="card-body p-5 text-center">
               <div class="mb-md-2 mt-md-2 pb-5">
-                <h2 class="fw-bold mb-2"><p style="margin-bottom:2rem">Atualizar Dados</p></h2> 
-  				<form id="frmLogin" method="post">	         		
-				  <div class="form-row" style="padding-top:15px;">				    
-				    <div class="form-group col-md-6">
-				      <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha Atual">
-				    </div>	
-				    <div class="form-group col-md-6">
-				      <input type="password" class="form-control" name="senhaNova" id="senhaNova" placeholder="Nova Senha">
-				    </div>			  
-				    <div class="form-group col-md-6">
-				      <input type="text" class="form-control" name="nome" id="nome" placeholder="Usuário Atual">
-				    </div>
-				     <div class="form-group col-md-6">
-				      <input type="text" class="form-control" name="nomeNovo" id="nomeNovo" placeholder="Novo usuário">
-				    </div>		
-				    <div class="form-group col-md-6">
-				      <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone">
-				    </div>
-				    <div class="form-group col-md-6">
-				      <input type="text" class="form-control" name="cep" id="cep" placeholder="CEP">
-				    </div>
-				    <div class="form-group col-md-6" id="botao">
-				      <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Endereço">
-				    </div>
-				  </div>                                     
-	                <p class="medium mb-2 pb-lg-2 CleargetMsg"><a class="text-white-50" id="getMsg" ></a></p>
-                	<p class="mb-0"><a class="btn btn-outline-light btn-lg"  type="button" id="btnEnviar">Cadastrar</a>
-	              </div>
-	              <div>
-                	<p class="medium mb-2 pb-lg-2"><a class="text-white-50" href="Index.jsp">Voltar a Home</a></p>
-	              </div>
-              </form>                   
+                <h2 class="fw-bold mb-2"><p style="margin-bottom:2rem">Atualizar Foto</p></h2> 
+    				<form id="frmLogin">   				              
+		              <div class="imgField"> 
+						<img src="https://i.pinimg.com/564x/b7/21/57/b72157473ae510c74e7a96ccb8bd0e38.jpg" id="geeks" height="236" frameborder="0" scrolling="no" width="236"  class="bordas" ></img> 
+	   			      </div>                                     
+	 			      <div>	 	    
+					     <div class="form-group label-floating">
+					           <input type="file" id="file" name="file" required>
+					     </div>   
+			          </div>		            
+			          <div class="form-outline form-white mb-5">
+			              <input type="email" name="email" id="email" class="form-control form-control-lg" placeholder="Informe Seu Email" for="email"/>                 
+			          </div>                
+		                  <p class="medium mb-2 pb-lg-2 CleargetMsg"><a class="text-white-50" id="getMsg" ></a></p>
+	                	  <p class="mb-0"><a class="btn btn-outline-light btn-lg"  type="button" id="btnEnviar">Cadastrar</a>
+		              </div>
+		              <div>
+	                	<p class="medium mb-2 pb-lg-2"><a class="text-white-50" href="Index.jsp">Voltar a Home</a></p>
+	              	 </div>	              
+	        	</form>   
+		      </div> 
             </div>
           </div>
         </div>
