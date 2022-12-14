@@ -74,11 +74,7 @@
   					
   					<div class="form-outline form-white mb-4">					
   						<a href="AtualizarFoto.jsp" class="btn btn-primary btn-rounded" role="button" aria-pressed="true">Atualizar Foto de Perfil</a>
-  					</div>
-  						
-  					<div class="form-outline form-white mb-4">					
-  						<a href="Adminstrar.jsp" class="btn btn-primary btn-rounded" role="button" aria-pressed="true">Painel de Controle</a>
-  					</div>  					
+  					</div>  						
                <div>
                 <p><a  href="Login.jsp" class="btn btn-outline-light btn-lg">Sair</a></p>
               </div>           
