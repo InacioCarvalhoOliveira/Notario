@@ -124,7 +124,7 @@ set. 21, 2022 8:57:48 PM org.apache.catalina.core.StandardWrapperValve invoke
 				    </div>
 				  </div>                                     
 	                <p class="medium mb-2 pb-lg-2 CleargetMsg"><a class="text-white-50" id="getMsg" ></a></p>
-                	<p class="mb-0"><a class="btn btn-outline-light btn-lg"  type="button" id="btnEnviar">Cadastrar</a>
+                	<p class="mb-0"><a class="btn btn-outline-light btn-lg"  type="button" id="btnEnviar">Atualizar</a>
 	              </div>
 	              <div>
                 	<p class="medium mb-2 pb-lg-2"><a class="text-white-50" href="Index.jsp">Voltar a Home</a></p>
